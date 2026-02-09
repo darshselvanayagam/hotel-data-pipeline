@@ -17,3 +17,21 @@ flowchart LR
     E --> F[Snowflake External Stage]
     F --> G[Snowflake Table]
     G --> H[Metabase Dashboard]
+
+
+hotel-data-pipeline/
+│
+├── data_generator/
+│   └── generate_mock_hotels.py
+│
+├── glue_job/
+│   └── clean_hotels_glue.py
+│
+├── lambda_trigger/
+│   └── trigger_glue_lambda.py
+│
+├── sql/
+│   ├── snowflake_setup.sql
+│   └── analytics_queries.sql
+│
+└── README.md
