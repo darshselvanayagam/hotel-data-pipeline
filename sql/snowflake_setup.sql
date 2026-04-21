@@ -33,10 +33,6 @@ ENABLED = TRUE
 STORAGE_AWS_ROLE_ARN = 'arn:aws:iam::699155485535:role/snowflake_s3_role'
 STORAGE_ALLOWED_LOCATIONS = ('s3://hotel-etl-portfolio-ds/curated/');
 
-##CHECKING INTEGRATION DETAILS
-DESC INTEGRATION s3_int_hotels;
-
-
 ##CREATING FILE FORMAT
  USE DATABASE hotel_db;
 USE SCHEMA analytics;
@@ -52,8 +48,6 @@ CREATE OR REPLACE STAGE stg_hotels_curated
 URL = 's3://hotel-etl-portfolio-ds/curated/mock_hotels_cleaned/'
 STORAGE_INTEGRATION = s3_int_hotels
 FILE_FORMAT = ff_hotels_csv;
-
-LIST @stg_hotels_curated;
 
 ## LOADING DATA INTO SNOWFLAKE TABLE
 TRUNCATE TABLE analytics.hotels_cleaned;
