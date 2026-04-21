@@ -28,7 +28,7 @@ with open(filename, mode="w", newline="") as file:
 
         date = (datetime.today() + timedelta(days=random.randint(0, 30))).strftime("%Y-%m-%d")
 
-        # keep decimals → will clean in Glue
+        # keep decimals → for cleaning later in Glue
         price = round(random.uniform(50, 500), 2)
 
         availability = random.choice([True, False])
