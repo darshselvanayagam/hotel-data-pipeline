@@ -10,7 +10,7 @@ hotel_names = [
     "Mountain Retreat", "Sunny Suites"
 ]
 
-# City codes (we will clean later in Glue)
+# City codes  (for cleaning later in Glue)
 city_codes = ["TOR", "NYC", "PAR", "TYO", "DXB"]
 
 num_rows = 100
